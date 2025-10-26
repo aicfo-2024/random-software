@@ -14,11 +14,11 @@ export default function Home() {
 
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Project Card: Tekka */}
+          {/* Project Card: Taru */}
           <ProjectCard
-            title="Tekka (鉄火)"
+            title="Taru (樽)"
             description="AI-powered content processing system. Automated RSS digests, podcast production pipeline, and persistent memory extraction."
-            link="https://tekka.random-software.com"
+            link="https://taru.random-software.com"
             tags={["AI", "Python", "Next.js"]}
             status="active"
           />
