@@ -1,100 +1,90 @@
+import { ProjectCard } from "./components/ProjectCard";
+
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-6 py-20">
-        {/* Header */}
-        <header className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-white mb-4">
+    <>
+      {/* Fixed Minimal Navigation */}
+      <header className="fixed top-0 left-0 right-0 z-50 bg-base-bg/80 backdrop-blur-sm border-b border-base-border">
+        <nav className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <a
+            href="/"
+            className="text-xl font-semibold text-base-text hover:text-brand-green"
+          >
+            Random Software
+          </a>
+          <div className="flex gap-8 text-sm">
+            <a
+              href="#work"
+              className="text-base-text hover:text-brand-green relative group"
+            >
+              Work
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-coral group-hover:w-full transition-all duration-300"></span>
+            </a>
+            <a
+              href="#about"
+              className="text-base-text hover:text-brand-green relative group"
+            >
+              About
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-coral group-hover:w-full transition-all duration-300"></span>
+            </a>
+          </div>
+        </nav>
+      </header>
+
+      {/* Main Content */}
+      <main className="min-h-screen bg-base-bg pt-24">
+        {/* Hero Section */}
+        <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+          <h1 className="text-hero font-bold text-base-text mb-6">
             Random Software
           </h1>
-          <p className="text-xl text-slate-300">
-            A collection of experiments, tools, and projects
+          <p className="text-xl text-base-text/70 max-w-2xl mx-auto leading-relaxed">
+            A collection of experiments, tools, and projects exploring the intersection of technology and creativity.
           </p>
-        </header>
+        </section>
 
-        {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {/* Project Card: Taru */}
+        {/* Projects Section - Single Column Gallery */}
+        <section id="work" className="max-w-4xl mx-auto px-6 py-20 space-y-30">
+          {/* Project: Taru */}
           <ProjectCard
-            title="Taru (樽)"
-            description="AI-powered content processing system. Automated RSS digests, podcast production pipeline, and persistent memory extraction."
+            title="Taru"
+            subtitle="樽"
+            description="An AI-powered content processing system that transforms scattered information into structured knowledge. Automated RSS digests, podcast production pipelines, and persistent memory extraction that learns from your workflow."
             link="https://taru.random-software.com"
             tags={["AI", "Python", "Next.js"]}
             status="active"
+            imagePlaceholder="bg-gradient-to-br from-brand-green/20 to-brand-coral/20"
           />
 
-          {/* Placeholder for future projects */}
+          {/* Placeholder Projects */}
           <ProjectCard
-            title="Project 2"
-            description="Coming soon..."
+            title="Project Two"
+            subtitle="Coming Soon"
+            description="An exploration of data visualization and interactive storytelling. Building tools that help people understand complex systems through elegant, intuitive interfaces."
             link="#"
-            tags={["TBD"]}
+            tags={["Data Viz", "React", "D3.js"]}
             status="planned"
+            imagePlaceholder="bg-gradient-to-br from-brand-coral/20 to-brand-green/20"
           />
 
           <ProjectCard
-            title="Project 3"
-            description="Coming soon..."
+            title="Project Three"
+            subtitle="In Development"
+            description="Experimenting with real-time collaboration tools that feel natural and unobtrusive. Focusing on flow state and reducing cognitive overhead in team workflows."
             link="#"
-            tags={["TBD"]}
+            tags={["WebRTC", "TypeScript"]}
             status="planned"
+            imagePlaceholder="bg-gradient-to-br from-base-text/10 to-brand-green/20"
           />
-        </div>
+        </section>
 
         {/* Footer */}
-        <footer className="text-center mt-20 text-slate-400">
-          <p>Built with Next.js · Deployed on Vercel</p>
+        <footer className="max-w-4xl mx-auto px-6 py-16 text-center border-t border-base-border mt-30">
+          <p className="text-sm text-base-text/50">
+            Built with Next.js · Deployed on Vercel
+          </p>
         </footer>
-      </div>
-    </main>
-  );
-}
-
-// Project Card Component
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  link: string;
-  tags: string[];
-  status: "active" | "planned" | "archived";
-}
-
-function ProjectCard({ title, description, link, tags, status }: ProjectCardProps) {
-  const statusColors = {
-    active: "bg-green-500/20 text-green-300 border-green-500/50",
-    planned: "bg-yellow-500/20 text-yellow-300 border-yellow-500/50",
-    archived: "bg-slate-500/20 text-slate-300 border-slate-500/50",
-  };
-
-  return (
-    <a
-      href={link}
-      className="block p-6 bg-slate-800/50 rounded-lg border border-slate-700 hover:border-slate-500 transition-all hover:scale-105"
-    >
-      {/* Status Badge */}
-      <div className="flex items-center justify-between mb-4">
-        <span className={`text-xs px-3 py-1 rounded-full border ${statusColors[status]}`}>
-          {status}
-        </span>
-      </div>
-
-      {/* Title */}
-      <h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-
-      {/* Description */}
-      <p className="text-slate-300 mb-4 line-clamp-3">{description}</p>
-
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-xs px-2 py-1 bg-slate-700 text-slate-300 rounded"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </a>
+      </main>
+    </>
   );
 }
