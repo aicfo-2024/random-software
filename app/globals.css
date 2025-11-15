@@ -36,3 +36,21 @@ body {
     transition-duration: 0ms;
   }
 }
+
+/* Restore list markers for MDX content */
+article ul {
+  list-style-type: disc;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+article ol {
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+}
+
+article li {
+  display: list-item;
+  padding-left: 0.5rem;
+}
