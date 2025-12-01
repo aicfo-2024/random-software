@@ -6,9 +6,9 @@ import { ProjectLinks } from "@/app/components/ProjectLinks";
 <ProjectHero
   title="Taru"
   subtitle="樽"
-  description="An AI-powered content processing system that transforms scattered information into structured knowledge through automated RSS digests, podcast production pipelines, and persistent memory extraction."
+  description="A collaborative AI research partner that helps you cultivate a rich knowledge garden."
   status="active"
-  tags={["AI", "Python", "Next.js", "Claude 3.5"]}
+  tags={["AI", "Python", "Next.js", "Claude"]}
   gradient="from-brand-green/20 to-brand-coral/20"
 />
 
@@ -22,84 +22,65 @@ import { ProjectLinks } from "@/app/components/ProjectLinks";
 
 ## Origin Story
 
-The name "Taru" (樽) means "barrel" in Japanese—a vessel that holds and transforms over time. Just as a barrel ages whiskey into something refined, Taru processes raw information streams into distilled knowledge.
+Over the past five years, I've consumed thousands of pieces of content—newsletters, podcasts, articles from thinkers I admire. Every idea I've written is some combination of what I've read and my own experiences. But I have zero tangible documentation of all that intellectual input. I can't trace the lineage of my own thinking.
 
-I built Taru because I was drowning in information. Every morning, I'd open 20+ browser tabs of RSS feeds, bookmarked articles, and newsletter digests. I'd skim headlines, save interesting pieces to read later, and promptly forget about them. My "read later" list became a graveyard of good intentions.
+The options available weren't working. Newsletters and podcasts give me agency—I choose exactly what I read and listen to—but the insights just evaporate. I'd read something brilliant on Monday, and by Friday it was gone. Social media has the same evaporation problem, plus the added issue that my attention is being algorithmically mediated for advertisers' benefit, not mine.
 
-The problem wasn't *access* to information—it was *processing* it. I needed something that didn't just aggregate content, but understood it. Something that could extract the signal from the noise, remember context across sources, and build a knowledge graph that grew smarter over time.
+Existing knowledge management tools promised to solve this by automating everything: save it all, let AI summarize, search when you need it. But that felt like surrendering the very thing I valued—conscious choice about what enters my mind.
 
-So I built Taru. Not as a passive inbox, but as an active processing system. It reads everything, remembers everything, and helps me make connections I would have missed.
+What I actually needed was a research partner. Someone who could do the pre-reading, help me identify what's worth going deeper on, and synthesize connections I couldn't see across 50 sources over months—but still let me make the calls. I built Taru to be that partner: an AI research assistant that works *with* me to tend my knowledge garden, not an autonomous agent that tends it *for* me.
 
 ## Design Principles
 
 <div className="grid md:grid-cols-2 gap-6 my-12">
   <DesignPrinciple
-    icon="🧠"
-    title="Persistent Memory"
-    description="Taru learns from every piece of content you process. It remembers entities, topics, and relationships, building a knowledge graph that grows with you. It's not just storage—it's understanding."
+    icon="🌱"
+    title="Conscious Consumption That Compounds"
+    description="Most tools force a tradeoff: agency (you choose what to consume) or accumulation (insights build over time). Taru gives you both. You control what enters the system. Those insights actually grow into something you can draw on."
   />
 
   <DesignPrinciple
-    icon="⚡"
-    title="Automated Workflows"
-    description="Set it and forget it. RSS digests, podcast pipelines, and content summarization run on autopilot while you focus on creation. Taru works while you sleep."
+    icon="🤝"
+    title="Partnership > Automation"
+    description="Taru functions as a research assistant who does the synthesis work humans can't do at scale. But you remain the gardener. The AI pre-reads, surfaces connections, identifies contradictions. You decide what stays."
   />
 
   <DesignPrinciple
-    icon="🎯"
-    title="AI-Native Processing"
-    description="Built on Claude 3.5 Sonnet, Taru doesn't just aggregate—it understands context, extracts insights, and adapts to your workflow. It thinks about your content, not just stores it."
+    icon="🔍"
+    title="Aligned AI > Black-Box"
+    description="Social media algorithms choose what you see and never explain why. Taru only works with content you've consciously added. When it says 'this is relevant,' it tells you why—connecting to articles you previously read."
   />
 
   <DesignPrinciple
-    icon="🔗"
-    title="Workflow Integration"
-    description="Works where you work. Export to Notion, sync with Obsidian, or feed directly into your personal knowledge base. Taru connects to your existing tools."
+    icon="🔐"
+    title="Earned Trust > Blind Delegation"
+    description="You wouldn't hand a human research assistant full autonomy on day one. More feedback upfront, more autonomy over time as trust builds. The cultivation review isn't resistance to automation—it's onboarding."
   />
 </div>
 
 ## What It Does
 
-### RSS Digest Automation
+Taru processes the content sources you've chosen to follow — newsletters, podcasts, articles — and serves as your research partner in making sense of it all.
 
-Configure your feeds once. Every morning, receive a curated digest with AI-generated summaries, key insights, relevance scoring, and one-click saves to your knowledge base.
+### Triage
 
-Taru doesn't just collect articles—it reads them, extracts what matters, and presents the information in a format optimized for quick decision-making: read now, save for later, or skip entirely.
+The system does a quick pre-read and helps you understand what's worth diving deeper into, so you're not wading through everything yourself. Quick decisions: read now, save for later, or skip entirely.
 
-### Podcast Production Pipeline
+### Deep Analysis
 
-Transform written content into audio formats automatically. Taru handles the entire pipeline:
+For content you select, Taru performs deeper research—extracting insights, identifying key themes, and connecting them to what's already in your knowledge garden.
 
-1. **Content ingestion** from blogs, newsletters, and RSS feeds
-2. **Script generation** optimized for audio delivery with natural pacing
-3. **Voice synthesis** with multiple voice options and emotional tone
-4. **Episode management** with metadata, show notes, and RSS feed generation
+### Cultivation Review
 
-Perfect for consuming long-form content during commutes or workouts.
+You see what Taru suggests adding to your garden and how it wants to organize it. You approve, edit, or reject. The system learns your preferences over time, earning more autonomy as it demonstrates understanding of what matters to you.
 
-### Memory Extraction Engine
+### Thought Partnership
 
-This is where Taru shines. It builds a persistent memory layer across all your content:
+Once your garden has depth, Taru becomes a conversation partner. Share a half-formed idea, and it surfaces connections and contradictions from your own reading. Eventually, it can steelman arguments against your thinking—not from generic internet sources, but from the sources *you* chose to follow.
 
-- **Entity recognition**: Automatically tracks people, companies, and concepts mentioned across sources
-- **Topic clustering**: Groups related content and reveals themes you didn't know existed
-- **Temporal tracking**: Shows how ideas evolve over time in your reading
-- **Cross-referencing**: Connects disparate sources that mention related concepts
+---
 
-The more you use Taru, the smarter it gets. It learns what matters to you and surfaces connections that would take hours to find manually.
-
-### Built for Creators
-
-Taru isn't just for consumption—it's a creation tool. When you're writing, researching, or building, Taru can:
-
-- Surface relevant past reading on demand
-- Generate summaries of topic clusters for quick reference
-- Identify gaps in your knowledge graph
-- Suggest connections between projects and concepts
-
-It's like having a research assistant who has read everything you've ever saved and can recall it instantly.
-
-## Try It Out
+The result: After a year, you have an actual intellectual asset. A second brain that knows what you've read, how it connects, and can help you sharpen your thinking when you need it.
 
 <ProjectLinks
   links={[
@@ -110,4 +91,4 @@ It's like having a research assistant who has read everything you've ever saved 
   layout="horizontal"
 />
 
-*Built with Python, Next.js, and Claude 3.5 Sonnet · Last updated: November 2024*
+*Built with Python, Next.js, and Claude · Last updated: November 2024*
