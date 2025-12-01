@@ -1,56 +1,113 @@
-export const metadata = {
-  title: "Taru - Random Software",
-  description: "An AI-powered content processing system",
-};
+import { ProjectHero } from "@/app/components/ProjectHero";
+import { DesignPrinciple } from "@/app/components/DesignPrinciple";
+import { ProjectImage } from "@/app/components/ProjectImage";
+import { ProjectLinks } from "@/app/components/ProjectLinks";
 
-# Taru (樽)
+<ProjectHero
+  title="Taru"
+  subtitle="樽"
+  description="An AI-powered content processing system that transforms scattered information into structured knowledge through automated RSS digests, podcast production pipelines, and persistent memory extraction."
+  status="active"
+  tags={["AI", "Python", "Next.js", "Claude 3.5"]}
+  gradient="from-brand-green/20 to-brand-coral/20"
+/>
 
-**An AI-powered content processing system**
+<ProjectLinks
+  links={[
+    { label: "Launch Taru", url: "https://taru.random-software.com", type: "demo" },
+    { label: "View on GitHub", url: "https://github.com/yourusername/taru", type: "github" },
+  ]}
+  layout="horizontal"
+/>
 
----
+## Origin Story
 
-## Overview
+The name "Taru" (樽) means "barrel" in Japanese—a vessel that holds and transforms over time. Just as a barrel ages whiskey into something refined, Taru processes raw information streams into distilled knowledge.
 
-Taru transforms scattered information into structured knowledge through automated RSS digests, podcast production pipelines, and persistent memory extraction that learns from your workflow.
+I built Taru because I was drowning in information. Every morning, I'd open 20+ browser tabs of RSS feeds, bookmarked articles, and newsletter digests. I'd skim headlines, save interesting pieces to read later, and promptly forget about them. My "read later" list became a graveyard of good intentions.
 
-## The Problem
+The problem wasn't *access* to information—it was *processing* it. I needed something that didn't just aggregate content, but understood it. Something that could extract the signal from the noise, remember context across sources, and build a knowledge graph that grew smarter over time.
 
-[Describe the problem Taru solves - perhaps about information overload, scattered content sources, etc.]
+So I built Taru. Not as a passive inbox, but as an active processing system. It reads everything, remembers everything, and helps me make connections I would have missed.
 
-## The Solution
+## Design Principles
 
-Taru provides:
+<div className="grid md:grid-cols-2 gap-6 my-12">
+  <DesignPrinciple
+    icon="🧠"
+    title="Persistent Memory"
+    description="Taru learns from every piece of content you process. It remembers entities, topics, and relationships, building a knowledge graph that grows with you. It's not just storage—it's understanding."
+  />
 
-- **RSS Digest Automation** - Automatically processes and summarizes RSS feeds
-- **Podcast Pipelines** - Converts written content into audio formats
-- **Memory Extraction** - Learns from your workflow patterns
+  <DesignPrinciple
+    icon="⚡"
+    title="Automated Workflows"
+    description="Set it and forget it. RSS digests, podcast pipelines, and content summarization run on autopilot while you focus on creation. Taru works while you sleep."
+  />
 
-## Technical Architecture
+  <DesignPrinciple
+    icon="🎯"
+    title="AI-Native Processing"
+    description="Built on Claude 3.5 Sonnet, Taru doesn't just aggregate—it understands context, extracts insights, and adapts to your workflow. It thinks about your content, not just stores it."
+  />
 
-Built with a modern stack:
+  <DesignPrinciple
+    icon="🔗"
+    title="Workflow Integration"
+    description="Works where you work. Export to Notion, sync with Obsidian, or feed directly into your personal knowledge base. Taru connects to your existing tools."
+  />
+</div>
 
-- Python for content processing
-- Next.js for the web interface
-- AI/ML for content analysis
+## What It Does
 
-### Key Features
+### RSS Digest Automation
 
-```python
-# Example: Processing a feed
-def process_feed(url):
-    feed = parse_rss(url)
-    summary = ai_summarize(feed.content)
-    return structured_output(summary)
-```
+Configure your feeds once. Every morning, receive a curated digest with AI-generated summaries, key insights, relevance scoring, and one-click saves to your knowledge base.
 
-## Design Philosophy
+Taru doesn't just collect articles—it reads them, extracts what matters, and presents the information in a format optimized for quick decision-making: read now, save for later, or skip entirely.
 
-[Your thoughts on why you built Taru this way, what inspired it, what makes it unique]
+### Podcast Production Pipeline
+
+Transform written content into audio formats automatically. Taru handles the entire pipeline:
+
+1. **Content ingestion** from blogs, newsletters, and RSS feeds
+2. **Script generation** optimized for audio delivery with natural pacing
+3. **Voice synthesis** with multiple voice options and emotional tone
+4. **Episode management** with metadata, show notes, and RSS feed generation
+
+Perfect for consuming long-form content during commutes or workouts.
+
+### Memory Extraction Engine
+
+This is where Taru shines. It builds a persistent memory layer across all your content:
+
+- **Entity recognition**: Automatically tracks people, companies, and concepts mentioned across sources
+- **Topic clustering**: Groups related content and reveals themes you didn't know existed
+- **Temporal tracking**: Shows how ideas evolve over time in your reading
+- **Cross-referencing**: Connects disparate sources that mention related concepts
+
+The more you use Taru, the smarter it gets. It learns what matters to you and surfaces connections that would take hours to find manually.
+
+### Built for Creators
+
+Taru isn't just for consumption—it's a creation tool. When you're writing, researching, or building, Taru can:
+
+- Surface relevant past reading on demand
+- Generate summaries of topic clusters for quick reference
+- Identify gaps in your knowledge graph
+- Suggest connections between projects and concepts
+
+It's like having a research assistant who has read everything you've ever saved and can recall it instantly.
 
 ## Try It Out
 
-Visit [taru.random-software.com](https://taru.random-software.com) to see it in action.
+<ProjectLinks
+  links={[
+    { label: "Launch Taru", url: "https://taru.random-software.com", type: "demo" },
+    { label: "View Documentation", url: "https://docs.taru.random-software.com", type: "docs" },
+    { label: "GitHub Repository", url: "https://github.com/yourusername/taru", type: "github" },
+  ]}
+  layout="horizontal"
+/>
 
----
-
-*Last updated: November 2024*
+*Built with Python, Next.js, and Claude 3.5 Sonnet · Last updated: November 2024*
