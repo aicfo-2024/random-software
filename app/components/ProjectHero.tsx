@@ -1,13 +1,18 @@
-import Image from "next/image";
+"use client";
+
+import { ProjectCarousel } from "./ProjectCarousel";
+
+interface CarouselImage {
+  src: string;
+  alt: string;
+  label: string;
+}
 
 interface ProjectHeroProps {
   title: string;
   subtitle?: string;
   description: string;
-  status: "active" | "planned" | "archived";
-  tags: string[];
-  imageSrc?: string;
-  imageAlt?: string;
+  images?: CarouselImage[];
   gradient?: string;
 }
 
@@ -15,79 +20,28 @@ export function ProjectHero({
   title,
   subtitle,
   description,
-  status,
-  tags,
-  imageSrc,
-  imageAlt = "",
+  images = [],
   gradient = "bg-gradient-to-br from-brand-green/20 to-brand-coral/20",
 }: ProjectHeroProps) {
-  const statusConfig = {
-    active: {
-      color: "bg-brand-green/20 text-brand-green border-brand-green/50",
-      label: "Active",
-    },
-    planned: {
-      color: "bg-brand-coral/20 text-brand-coral border-brand-coral/50",
-      label: "Planned",
-    },
-    archived: {
-      color: "bg-base-text/10 text-base-text/50 border-base-text/30",
-      label: "Archived",
-    },
-  };
-
   return (
-    <div className="mb-16">
-      {/* Hero Image */}
-      <div
-        className={`w-full aspect-[16/9] rounded-lg mb-8 ${gradient} flex items-center justify-center overflow-hidden relative`}
-      >
-        {imageSrc ? (
-          <Image
-            src={imageSrc}
-            alt={imageAlt}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 768px"
-          />
-        ) : (
-          <span className="text-6xl text-base-text/10">{title.slice(0, 1)}</span>
-        )}
+    <div className="mb-16 rounded-lg border border-base-border bg-base-bg overflow-hidden md:shadow-xl">
+      <ProjectCarousel
+        images={images}
+        title={title}
+        gradientFallback={gradient}
+      />
 
-        {/* Status Badge - Top Right Corner */}
-        <div className="absolute top-4 right-4">
-          <span
-            className={`inline-block text-xs px-3 py-1 rounded-full border ${statusConfig[status].color} font-medium uppercase tracking-wider`}
-          >
-            {statusConfig[status].label}
-          </span>
-        </div>
-      </div>
+      <div className="px-8 py-8 md:px-10">
+        <h1 className="text-display font-bold text-base-text mb-2">
+          {title}
+          {subtitle && (
+            <span className="text-base-text/40 ml-4 text-3xl">{subtitle}</span>
+          )}
+        </h1>
 
-      {/* Title & Subtitle */}
-      <h1 className="text-display font-bold text-base-text mb-2">
-        {title}
-        {subtitle && (
-          <span className="text-base-text/40 ml-4 text-3xl">{subtitle}</span>
-        )}
-      </h1>
-
-      {/* Description */}
-      <p className="text-xl text-base-text/70 leading-relaxed mb-6 max-w-2xl">
-        {description}
-      </p>
-
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-sm px-3 py-1 bg-base-bg border border-base-border text-base-text/60 rounded-md"
-          >
-            {tag}
-          </span>
-        ))}
+        <p className="text-xl text-base-text/70 leading-relaxed max-w-2xl">
+          {description}
+        </p>
       </div>
     </div>
   );

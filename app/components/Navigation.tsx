@@ -38,7 +38,10 @@ function NavDropdown({ label, items }: NavDropdownProps) {
   // Close dropdown when clicking outside
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
         setIsOpen(false);
       }
     }
@@ -112,10 +115,9 @@ function NavDropdown({ label, items }: NavDropdownProps) {
   );
 }
 
-// Project items for Gallery dropdown - update this when adding new projects
-const galleryItems: DropdownItem[] = [
-  { href: "/projects/taru", label: "Taru" },
-];
+import { getGalleryItems } from "@/app/config/projects";
+
+const galleryItems: DropdownItem[] = getGalleryItems();
 
 export function Navigation() {
   return (

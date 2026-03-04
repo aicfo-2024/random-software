@@ -7,15 +7,17 @@ import { ProjectLinks } from "@/app/components/ProjectLinks";
   title="Taru"
   subtitle="樽"
   description="A collaborative AI research partner that helps you cultivate a rich knowledge garden."
-  status="active"
-  tags={["AI", "Python", "Next.js", "Claude"]}
-  gradient="from-brand-green/20 to-brand-coral/20"
+  images={[
+    { src: "/images/projects/taru/1-garden.png", alt: "Explore your knowledge garden", label: "Garden" },
+    { src: "/images/projects/taru/2-writing.png", alt: "AI researcher copilot", label: "Writing" },
+    { src: "/images/projects/taru/3-history.png", alt: "Review recent content for insights", label: "History" },
+  ]}
 />
 
 <ProjectLinks
   links={[
     { label: "Launch Taru", url: "https://taru.random-software.com", type: "demo" },
-    { label: "View on GitHub", url: "https://github.com/yourusername/taru", type: "github" },
+    { label: "View on GitHub", url: "https://github.com/aicfo-2024/taru", type: "github" },
   ]}
   layout="horizontal"
 />
@@ -85,10 +87,7 @@ The result: After a year, you have an actual intellectual asset. A second brain 
 <ProjectLinks
   links={[
     { label: "Launch Taru", url: "https://taru.random-software.com", type: "demo" },
-    { label: "View Documentation", url: "https://docs.taru.random-software.com", type: "docs" },
-    { label: "GitHub Repository", url: "https://github.com/yourusername/taru", type: "github" },
+    { label: "GitHub Repository", url: "https://github.com/aicfo-2024/taru", type: "github" },
   ]}
   layout="horizontal"
 />
-
-*Built with Python, Next.js, and Claude · Last updated: November 2024*
