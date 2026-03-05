@@ -4,12 +4,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
     // Custom typography styles for MDX content
     h1: ({ children }) => (
-      <h1 className="text-display font-bold text-base-text mb-6">
+      <h1 className="text-display font-bold text-base-text mb-6 text-pretty">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-h1 font-bold text-base-text mb-4 mt-16 pb-3 border-b-2 border-brand-green/20">
+      <h2 className="text-h1 font-bold text-base-text mb-4 mt-16">
         {children}
       </h2>
     ),
@@ -19,7 +19,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </h3>
     ),
     p: ({ children }) => (
-      <p className="text-base-text/80 leading-relaxed mb-4">{children}</p>
+      <p className="text-base-text/80 leading-relaxed mb-6">{children}</p>
     ),
     a: ({ children, href }) => (
       <a
@@ -30,7 +30,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </a>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-outside ml-6 text-base-text/80 mb-4 space-y-2">
+      <ul className="list-disc list-outside ml-6 text-base-text/80 mb-6 space-y-2 pl-2 border-l-2 border-base-border">
         {children}
       </ul>
     ),
@@ -40,9 +40,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </ol>
     ),
     li: ({ children }) => (
-      <li className="text-base-text/80 leading-relaxed">
-        {children}
-      </li>
+      <li className="text-base-text/80 leading-relaxed">{children}</li>
     ),
     blockquote: ({ children }) => (
       <blockquote className="border-l-4 border-brand-coral pl-4 italic text-base-text/70 my-4">

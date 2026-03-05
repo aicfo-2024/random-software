@@ -5,8 +5,8 @@ import { ProjectLinks } from "@/app/components/ProjectLinks";
 
 <ProjectHero
   title="Taru"
-  subtitle="樽"
-  description="A collaborative AI research partner that helps you cultivate a rich knowledge garden."
+  subtitle="足"
+  description="An AI research assistant that helps you internalize the podcasts, articles, and newsletters you already consume — turning passive listening into a searchable, connected record of your own thinking."
   images={[
     { src: "/images/projects/taru/1-garden.png", alt: "Explore your knowledge garden", label: "Garden" },
     { src: "/images/projects/taru/2-writing.png", alt: "AI researcher copilot", label: "Writing" },
@@ -24,65 +24,66 @@ import { ProjectLinks } from "@/app/components/ProjectLinks";
 
 ## Origin Story
 
-Over the past five years, I've consumed thousands of pieces of content—newsletters, podcasts, articles from thinkers I admire. Every idea I've written is some combination of what I've read and my own experiences. But I have zero tangible documentation of all that intellectual input. I can't trace the lineage of my own thinking.
+You subscribe to the right podcasts. You read the sharpest newsletters. You follow thinkers who genuinely change how you see the world. But when someone asks you about an idea you heard three weeks ago, you get the gist — maybe — and lose the details entirely.
 
-The options available weren't working. Newsletters and podcasts give me agency—I choose exactly what I read and listen to—but the insights just evaporate. I'd read something brilliant on Monday, and by Friday it was gone. Social media has the same evaporation problem, plus the added issue that my attention is being algorithmically mediated for advertisers' benefit, not mine.
+Bookmarks collect dust. Highlights sit in apps you never reopen. Note-taking systems demand more time than the content itself. The gap between what you consume and what you retain is enormous — and it widens every week.
 
-Existing knowledge management tools promised to solve this by automating everything: save it all, let AI summarize, search when you need it. But that felt like surrendering the very thing I valued—conscious choice about what enters my mind.
+Podcasts are the worst offender: hours of rich conversation, locked behind audio, with no way to search, annotate, or retrieve the ideas inside.
 
-What I actually needed was a research partner. Someone who could do the pre-reading, help me identify what's worth going deeper on, and synthesize connections I couldn't see across 50 sources over months—but still let me make the calls. I built Taru to be that partner: an AI research assistant that works *with* me to tend my knowledge garden, not an autonomous agent that tends it *for* me.
+Existing knowledge management tools promised to solve this by automating everything: save it all, let AI summarize, search when you need it. But summaries aren't understanding. What I actually needed was a research partner — one that could help me process what I'd consumed and draw out what *I* thought about it, not just what the author said.
+
+I built Taru to be that partner. The name comes from the tsukubai inscription at Kyoto's Ryoan-ji Temple: 吾唯足知 — "I learn only to be contented." Depth over breadth. Sufficiency over accumulation.
 
 ## Design Principles
 
 <div className="grid md:grid-cols-2 gap-6 my-12">
   <DesignPrinciple
     icon="🌱"
-    title="Conscious Consumption That Compounds"
-    description="Most tools force a tradeoff: agency (you choose what to consume) or accumulation (insights build over time). Taru gives you both. You control what enters the system. Those insights actually grow into something you can draw on."
+    title="Starts After You've Consumed Something"
+    description="Most AI tools help you consume faster. Taru helps you hold onto what you've already consumed. It's not about reading more — it's about retaining what matters."
   />
 
   <DesignPrinciple
     icon="🤝"
-    title="Partnership > Automation"
-    description="Taru functions as a research assistant who does the synthesis work humans can't do at scale. But you remain the gardener. The AI pre-reads, surfaces connections, identifies contradictions. You decide what stays."
+    title="Asks What You Think"
+    description="Summaries are easy. Taru's reflection conversations draw out your perspective — what surprised you, what you disagree with, what connects to something you heard last month."
   />
 
   <DesignPrinciple
     icon="🔍"
-    title="Aligned AI > Black-Box"
-    description="Social media algorithms choose what you see and never explain why. Taru only works with content you've consciously added. When it says 'this is relevant,' it tells you why—connecting to articles you previously read."
+    title="Compounds Over Time"
+    description="Your tenth capture is more valuable than your first. Taru surfaces contradictions in your thinking, unexpected connections between sources, and patterns in what resonates with you."
   />
 
   <DesignPrinciple
     icon="🔐"
     title="Earned Trust > Blind Delegation"
-    description="You wouldn't hand a human research assistant full autonomy on day one. More feedback upfront, more autonomy over time as trust builds. The cultivation review isn't resistance to automation—it's onboarding."
+    description="You wouldn't hand a human research assistant full autonomy on day one. Taru starts with more feedback, earns more autonomy over time as it demonstrates understanding of what matters to you."
+    variant="highlighted"
   />
 </div>
 
 ## What It Does
 
-Taru processes the content sources you've chosen to follow — newsletters, podcasts, articles — and serves as your research partner in making sense of it all.
+### Capture
 
-### Triage
+Share a podcast, article, or newsletter from your phone or browser. Taru handles full transcription, deep AI analysis, and key insight extraction — all in minutes. Capture happens through a Telegram bot, iOS Shortcuts, or the web app.
 
-The system does a quick pre-read and helps you understand what's worth diving deeper into, so you're not wading through everything yourself. Quick decisions: read now, save for later, or skip entirely.
+### Reflect
 
-### Deep Analysis
+When processing completes, Taru opens a short Socratic conversation. Not a summary — a dialogue. It asks what resonated, surfaces connections to things you've captured before, and helps you articulate your own take. This happens inline in Telegram or in the web app.
 
-For content you select, Taru performs deeper research—extracting insights, identifying key themes, and connecting them to what's already in your knowledge garden.
+### Remember
 
-### Cultivation Review
-
-You see what Taru suggests adding to your garden and how it wants to organize it. You approve, edit, or reject. The system learns your preferences over time, earning more autonomy as it demonstrates understanding of what matters to you.
+Your reflections get indexed alongside the source material into a growing Knowledge Garden. Every insight is searchable, connected, and compounding — building a record of not just what you've consumed, but what you think.
 
 ### Thought Partnership
 
-Once your garden has depth, Taru becomes a conversation partner. Share a half-formed idea, and it surfaces connections and contradictions from your own reading. Eventually, it can steelman arguments against your thinking—not from generic internet sources, but from the sources *you* chose to follow.
+Once your garden has depth, Taru becomes a conversation partner. Share a half-formed idea, and it surfaces connections and contradictions from your own reading — not from generic internet sources, but from the sources *you* chose to follow.
 
 ---
 
-The result: After a year, you have an actual intellectual asset. A second brain that knows what you've read, how it connects, and can help you sharpen your thinking when you need it.
+The result: after months of use, you have an actual intellectual asset. A second brain that knows what you've read, how it connects, and can help you sharpen your thinking when you need it.
 
 <ProjectLinks
   links={[

@@ -23,11 +23,11 @@ export const projects: ProjectConfig[] = [
   {
     id: "taru",
     title: "Taru",
-    subtitle: "\u6A3D",
+    subtitle: "足",
     description:
-      "An AI-powered content processing system that transforms scattered information into structured knowledge. Automated RSS digests, podcast production pipelines, and persistent memory extraction that learns from your workflow.",
+      "An AI research assistant that helps you internalize the podcasts, articles, and newsletters you already consume — turning passive listening into a searchable, connected record of your own thinking.",
     link: "/projects/taru",
-    tags: ["AI", "Python", "Next.js"],
+    tags: ["AI", "Python", "FastAPI", "Next.js"],
     status: "active",
     images: [
       {
