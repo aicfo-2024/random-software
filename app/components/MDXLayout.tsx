@@ -10,7 +10,7 @@ export function MDXLayout({ children }: MDXLayoutProps) {
       <article className="max-w-3xl mx-auto px-6 py-20">{children}</article>
 
       {/* Footer */}
-      <footer className="max-w-3xl mx-auto px-6 py-16 text-center border-t border-base-border mt-20">
+      <footer className="max-w-3xl mx-auto px-6 py-8 text-center border-t border-base-border mt-12">
         <p className="text-sm text-base-text/50">
           Built with Next.js · Deployed on Vercel
         </p>
