@@ -21,6 +21,25 @@ interface ProjectConfig {
 
 export const projects: ProjectConfig[] = [
   {
+    id: "docket",
+    title: "The Docket",
+    subtitle: "",
+    description:
+      "One event list to rule them all for SXSW regulars: plan your week, share your schedule, and link up with your people.",
+    link: "/projects/docket",
+    tags: ["Next.js", "Supabase", "Tailwind CSS", "TypeScript"],
+    status: "active",
+    images: [
+      {
+        src: "/images/projects/docket/docket-home.png",
+        alt: "The Docket event feed showing trending SXSW events",
+        label: "Home",
+      },
+    ],
+    imagePlaceholder: "bg-gradient-to-br from-[#0BA03D]/20 to-[#F9CB0D]/20",
+    navLabel: "The Docket",
+  },
+  {
     id: "taru",
     title: "Taru",
     subtitle: "足",

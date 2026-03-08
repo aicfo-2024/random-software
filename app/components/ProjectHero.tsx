@@ -31,15 +31,17 @@ export function ProjectHero({
         gradientFallback={gradient}
       />
 
-      <div className="px-8 py-8 md:px-10">
-        <h1 className="text-display font-bold text-base-text mb-2">
+      <div className="px-5 py-6 sm:px-8 sm:py-8 md:px-10">
+        <h1 className="text-2xl sm:text-4xl md:text-display font-bold text-base-text mb-2">
           {title}
           {subtitle && (
-            <span className="text-base-text/40 ml-4 text-3xl">{subtitle}</span>
+            <span className="text-base-text/40 ml-2 sm:ml-4 text-xl sm:text-3xl">
+              {subtitle}
+            </span>
           )}
         </h1>
 
-        <p className="text-xl text-base-text/70 leading-relaxed max-w-2xl">
+        <p className="text-base md:text-xl text-base-text/70 leading-relaxed max-w-2xl">
           {description}
         </p>
       </div>

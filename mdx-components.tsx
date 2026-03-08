@@ -2,19 +2,18 @@ import type { MDXComponents } from "mdx/types";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
-    // Custom typography styles for MDX content
     h1: ({ children }) => (
-      <h1 className="text-display font-bold text-base-text mb-6 text-pretty">
+      <h1 className="text-3xl sm:text-4xl md:text-display font-bold text-base-text mb-6 text-pretty">
         {children}
       </h1>
     ),
     h2: ({ children }) => (
-      <h2 className="text-h1 font-bold text-base-text mb-4 mt-16">
+      <h2 className="text-2xl md:text-h1 font-bold text-base-text mb-4 mt-12 md:mt-16">
         {children}
       </h2>
     ),
     h3: ({ children }) => (
-      <h3 className="text-2xl font-semibold text-base-text mb-3 mt-6">
+      <h3 className="text-xl md:text-2xl font-semibold text-base-text mb-3 mt-6">
         {children}
       </h3>
     ),
@@ -30,12 +29,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </a>
     ),
     ul: ({ children }) => (
-      <ul className="list-disc list-outside ml-6 text-base-text/80 mb-6 space-y-2 pl-2 border-l-2 border-base-border">
+      <ul className="list-disc list-outside ml-4 md:ml-6 text-base-text/80 mb-6 space-y-2 pl-2 border-l-2 border-base-border">
         {children}
       </ul>
     ),
     ol: ({ children }) => (
-      <ol className="list-decimal list-outside ml-6 text-base-text/80 mb-4 space-y-2">
+      <ol className="list-decimal list-outside ml-4 md:ml-6 text-base-text/80 mb-4 space-y-2">
         {children}
       </ol>
     ),
