@@ -13,7 +13,7 @@ export function ProjectLinks({
 }: ProjectLinksProps) {
   const layoutClasses =
     layout === "horizontal"
-      ? "flex flex-wrap gap-4"
+      ? "flex flex-col sm:flex-row sm:flex-wrap gap-3 sm:gap-4"
       : "flex flex-col gap-3 max-w-xs";
 
   const getIcon = (type: string = "custom") => {

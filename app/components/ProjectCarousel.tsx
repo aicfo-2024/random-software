@@ -66,7 +66,7 @@ export function ProjectCarousel({
 
       {images.length > 1 && (
         <SliderBtnGroup
-          className={`absolute bottom-0 left-0 right-0 h-fit bg-base-bg/60 backdrop-blur-md overflow-hidden grid rounded-b-lg border-t border-base-border/50 grid-cols-${images.length}`}
+          className={`hidden md:grid absolute bottom-0 left-0 right-0 h-fit bg-base-bg/60 backdrop-blur-md overflow-hidden rounded-b-lg border-t border-base-border/50 grid-cols-${images.length}`}
         >
           {images.map((image) => (
             <SliderBtn
